@@ -1,0 +1,393 @@
+body {
+    font-family: BrandonRegular;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  font-family: arial;
+}
+.container:after, .container:before {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Start navbar */
+.nav {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ececec;
+  min-height: 50px;
+  height: auto;
+}
+.nav .nav-heading {float: left}
+
+.nav .nav-heading .toggle-nav {
+  padding: 2px 10px;
+  border-radius: 5px;
+  border: none;
+  display: none;
+  background-color: transparent;
+}
+.nav .nav-heading > a {
+  text-decoration: none;
+  color: #000;
+  line-height: 60px;
+  font-weight: 400;
+  font-size: 19px;
+}
+
+/* Start menu */
+.nav .menu {
+  float: right;
+  margin: 35px;
+  font-family: Selima;
+  font-size: 45px;
+}
+.nav .menu:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.nav .list {
+  float: right;
+  margin: 0;
+}
+.nav .list > li {
+  float: left;
+  list-style: none;
+}
+
+.nav .list > li > a {
+  color: #555;
+  text-decoration: none;
+  display: block;
+  line-height: 60px;
+  padding: 0 10px;
+}
+.nav .list > li > a:hover,
+.nav .list > li.active > a {
+  color: #333
+}
+
+/* Start drodpwn menu */
+.categories {
+  position: relative;
+}
+.nav .list .categories .drop-down {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #FFF;
+  border: 1px solid #ccc;
+  padding: 5px 0;
+  min-width: 160px;
+  width: auto;
+  white-space: nowrap;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  display: none;
+  z-index: 99999
+}
+.nav .list .drop-down > .seprator {
+  height: 1px;
+  width: 100%;
+  margin: 9px 0;
+  background-color: #e5e5e5
+}
+.drop-down > li > a {
+  color: #333;
+  display: block;
+  padding: 3px 20px;
+  text-decoration: none;
+}
+.show {
+  display: block
+}
+
+/* Sub dropdown menu */
+.categories .drop-down .sub-drop-down {position: relative}
+.categories .drop-down .sub-drop-down:hover .sub-dropdown {
+  display: block;
+}
+.categories .drop-down .sub-dropdown {
+  position: absolute;
+  top: -20px;
+  left: 107%;
+  list-style: none;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  padding: 10px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  display: none;
+}
+.categories .drop-down .sub-dropdown:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #cccccc
+}
+.categories .drop-down .sub-dropdown > li > a {
+  color: #555;
+  padding: 5px 0;
+  display: block
+}
+/* End sub dropdown menu */
+/* Dark theme */
+.dark-nav {background-color: #2f3340}
+
+.dark-nav .list > li > a {color: #BBB}
+
+.dark-nav .list > li > a:hover,
+.dark-nav .list > li.active > a {color: #FFF}
+
+.dark-nav .nav-heading > a {color: #EEE}
+
+.dark-nav .nav-heading .toggle-nav {color: #EEE}
+
+/* End Dark theme */
+
+/* Start media query for navbar */
+@media (max-width: 767px) {
+  .nav .container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .nav .nav-heading {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom: 1px solid #e7e7e7
+  }
+  .nav .nav-heading .brand {float: left}
+
+  .nav .nav-heading .toggle-nav {
+    display: block;
+    float: right;
+    margin-top: 14px;
+  }
+
+  .nav .menu {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: none;
+  }
+
+  .nav .list {
+    float: none;
+    width: 100%;
+  }
+  .nav .list > li {
+    float: none;
+    width: 100%;
+  }
+  .nav .list > li > a {padding: 12px 0;line-height: 1}
+
+  .nav .list .categories .drop-down {
+    background-color: transparent;
+    border: none;
+    position: static;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 0
+  }
+  .categories .drop-down .sub-dropdown {
+    position: static;
+    background-color: transparent;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding-left: 20px;
+  }
+  .categories .drop-down .sub-dropdown > li > a {
+    color: #888;
+  }
+  .categories .drop-down .sub-dropdown:before {
+    display: none
+  }
+  /* Simple reset for dark theme */
+  .dark-nav .menu {background-color: #252831}
+  .dark-nav .nav-heading {border-bottom-color: #31343c}
+  .dark-nav .list .drop-down > li > a {color: #AAA}
+  .dark-nav .list .categories .drop-down .seprator {background-color: #2a2d38}
+
+}
+
+
+/*Review Styles*/
+
+.Reviews {
+    margin-top: 75px;
+    padding: 15px;
+    font-family: BrandonMedium;
+    font-size: 25px;
+}
+
+.Reviews #podium {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 400px;
+    height: 500px;
+}
+
+#review-description {
+    font-family: BrandonMedium;
+    font-size: 35px;
+    color: #262626;
+    margin-top: 40px;
+}
+
+#about_us_reviews {
+    margin-top: 75px;
+}
+
+.number {
+    width: 350px;
+    height: 100px;
+    margin: 15px;
+}
+
+.welcome {
+    height:100vh;
+    padding: 15px;
+    background-color: white;
+    font-family: BrandonMedium;
+    font-size: 100px;
+    color: #F7F7F7;
+    font-family: Selima;
+
+    background: url(Images/team_picture.png) center no-repeat;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: auto;
+    opacity: 0.8;
+
+}
+
+.welcome p {
+    margin-top: 250px;
+}
+
+/* Solution-Short */
+
+.Solution-Short {
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: black;
+    margin-top: 3%;
+    background-color: white;
+    padding: 25px;
+}
+
+/*Contest Styles*/
+
+#demo {
+    font-family: InconsolataBold;
+    font-size: 100px;
+}
+
+.Contest #contest_header {
+    font-family: BrandonBlack;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-shadow: 0 0 1px rgba(0,0,0,.05),0 1px 2px rgba(0,0,0,.3);
+    font-weight: 400;
+    letter-spacing: 8px;
+    line-height: 1.5;
+    color: white;
+    margin-top: 3%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.Contest {
+    background-color: #396D94;
+    color: white;
+    padding: 25px;
+}
+
+/*Contact Styles*/
+
+
+
+.footer {
+    font-family: BrandonBlack;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-shadow: 0 0 1px rgba(0,0,0,.05),0 1px 2px rgba(0,0,0,.3);
+    font-weight: 400;
+    letter-spacing: 8px;
+    line-height: 1.5;
+    color: black;
+    margin-left: 15px;
+}
+
+/*Large Desktops*/
+
+@media (min-width: 1000px) { 
+    .contact_details {
+        font-size: 25px;
+    }
+}
+
+/*Smart Phones Landscape, Tablets Portrait*/
+
+@media (max-width: 768px) { 
+    .contact_details {
+        font-size: 12px;
+    }
+}
+/*Fonts*/
+
+@font-face {
+    font-family: "Selima";
+    src: url("fonts/Selima.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "InconsolataBold";
+    src: url("fonts/Inconsolata-Bold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "InconsolataRegular";
+    src: url("fonts/Inconsolata-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "BrandonBlack";
+    src: url("fonts/brandon_blk-webfont.woff") format('woff');
+}
+
+@font-face {
+    font-family: "BrandonBold";
+    src: url("fonts/brandon_bld-webfont.woff") format('woff');
+}
+
+@font-face {
+    font-family: "BrandonMedium";
+    src: url("fonts/brandon_med-webfont.woff") format('woff');
+}
+
+@font-face {
+    font-family: "BrandonRegular";
+    src: url("fonts/brandon_reg-webfont.woff") format('woff');
+}

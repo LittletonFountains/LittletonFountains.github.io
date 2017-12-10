@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+	<title>LMS Fountains</title>
+	<meta name="description" content="This is the website that Littleton Team # 3 Mechanism Madness created for their project to install new water fountains at the Littleton Middle School">
+
+	<meta name="author" content="Sruthi Kurada">
+
+	<link rel="icon" type="image/png" href="Images/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="Images/favicon-16x16.png" sizes="16x16" />
+
+</head>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("December 16, 2017 12:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text 
+  if (distance < 0) {
+  	clearInterval(x);
+  	document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+<body>
+	<!--  Remove dark nav  -->
+	<nav class="nav">
+		<div class="container">
+				<img src = "Images/Mechanism.png"  class = "number"/>
+			<div class="menu text-center" id="open-navbar1">
+				<ul class="list">
+					<li><a href="#">Home * </a></li>
+					<li><a href="our_solution.html">Our Solution * </a></li>
+					<li><a href="about_us.html">About Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class = "welcome">
+		<div class = "container">
+			<p>Hi, we're team Mechanism Madness #32648, an FLL team from Littleton, MA</p>
+		</div>
+	</div>
+
+	<header>
+		<h1>Our Project: </h1>
+	</header>
+
+	<section id="cd-timeline" class="cd-container">
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-picture">
+				<img src="img/cd-icon-picture.svg" alt="Picture">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Problem: </h2>
+				<p>The current water fountains at the Littleton Middle School are underused. This is because students have a perception of bacteria on the fountainhead and the water is discolored and warm.</p>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-movie">
+				<img src="img/cd-icon-movie.svg" alt="Movie">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Solution</h2>
+				<p>We plan to solve this by installing new fountains with a chiller, a filter, and a vertical filler. We are also expanding our idea by providing a dashboard for the grades to friendly competition for how many disposable water bottles can be saved, and reduce the carbon footprint.</p>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+	</section> <!-- cd-timeline -->
+
+
+
+	<header>
+		<h1>How it Works: </h1>
+	</header>
+
+	<section id="cd-timeline" class="cd-container">
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-picture">
+				<img src="img/cd-icon-picture.svg" alt="Picture">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Step 1:</h2>
+				<p>Teachers can check if there is already a friendly competition going on, by scrolling down</p>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-movie">
+				<img src="img/cd-icon-movie.svg" alt="Movie">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Step 2:</h2>
+				<p>If there is not, teachers can select a grade from both of the drop down menus and press the start button, which will begin a weeklong encouragment between the grades to see who can save the most plastic water bottles.</p>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-picture">
+				<img src="img/cd-icon-picture.svg" alt="Picture">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Step 3:</h2>
+				<p>Tell your students to be ready to bring in their resuable water bottles!</p>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+	</section> <!-- cd-timeline -->
+
+	<!--Countdown for Contest-->
+	<div class = "Contest">
+		<div class="container">
+			<div class = "text-center">
+				<p id = "contest_header">Contest ends in:</p>
+			</div>
+			<p class = "text-center" id="demo"></p>
+			<p class = "text-center">6th Grade is in the lead followed by 8th and lastly 7th!</p>
+		</div>
+	</div>
+
+	<!--Countdown for Contest-->
+	<div class = "footer">
+		<div class="container">
+			<p>Made by team Mechanism Madness #32648 &copy;</p>
+		</div>
+	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/main.js"></script> <!-- Resource jQuery -->
+</body>
+</html>
